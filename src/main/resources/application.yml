@@ -1,0 +1,28 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+  tomcat:
+    uri-encoding: UTF-8
+
+spring:
+  application:
+    name: sample
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    database: 0
+    password:
+    timeout: 3s
+    lettuce:
+      pool:
+        max-active: 200
+        max-idle: 80
+        min-idle: 0
+        max-wait: -1
+  cache:
+    cache-names: token&P1D, city&PT6H
+    redis:
+      use-key-prefix: true
+      key-prefix: "${spring.application.name}::"
+      time-to-live: PT1M
