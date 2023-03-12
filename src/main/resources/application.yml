@@ -5,6 +5,10 @@ server:
   tomcat:
     uri-encoding: UTF-8
 
+logging:
+  level:
+    root: DEBUG
+
 spring:
   application:
     name: sample
